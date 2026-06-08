@@ -1,0 +1,103 @@
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.count {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.tableWrap { overflow-x: auto; }
+
+table { width: 100%; border-collapse: collapse; }
+
+thead tr { background: #0b0e12; }
+[data-theme="light"] thead tr { background: var(--surface-hi); }
+
+th {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 9px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: rgba(255,255,255,.018); }
+[data-theme="light"] tbody tr:hover { background: rgba(0,0,0,.03); }
+
+td {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text);
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.pathCell {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-dim) !important;
+}
+
+.excType { color: var(--red) !important; }
+
+.sdkBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 10px;
+  font-size: 10px;
+  border: 1px solid currentColor;
+  opacity: .85;
+}
+
+.dot { width: 5px; height: 5px; border-radius: 50%; }
+
+.countBadge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 10px;
+  background: var(--red-dim);
+  color: var(--red);
+  font-weight: 600;
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  gap: 8px;
+}

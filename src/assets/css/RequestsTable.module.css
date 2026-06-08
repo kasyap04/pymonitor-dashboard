@@ -1,0 +1,190 @@
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text);
+  flex-shrink: 0;
+}
+
+.spacer { flex: 1; }
+
+/* Toggle: Requests / Exceptions */
+.toggle {
+  display: flex;
+  border: 1px solid var(--border-hi);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.toggleBtn {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .06em;
+  padding: 4px 12px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background .15s, color .15s;
+  border-right: 1px solid var(--border-hi);
+}
+.toggleBtn:last-child { border-right: none; }
+.toggleBtn[data-active="true"] {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+.toggleBtn[data-mode="errors"][data-active="true"] {
+  background: var(--red-dim);
+  color: var(--red);
+}
+
+/* SDK multi-select chips */
+.sdkFilter {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  border: 1px solid var(--border-hi);
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all .15s;
+}
+.chip[data-active="true"] {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.chipDot { width: 6px; height: 6px; border-radius: 50%; }
+
+/* Table */
+.tableWrap { overflow-y: auto; max-height: 380px; }
+
+table { width: 100%; border-collapse: collapse; }
+
+thead tr {
+  position: sticky; top: 0; z-index: 1;
+  background: #0b0e12;
+}
+[data-theme="light"] thead tr { background: var(--surface-hi); }
+
+th {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+  padding: 9px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: rgba(255,255,255,.018); }
+[data-theme="light"] tbody tr:hover { background: rgba(0,0,0,.03); }
+
+td {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text);
+  padding: 8px 16px;
+  white-space: nowrap;
+}
+
+.timeCell { color: var(--text-muted) !important; }
+
+.pathCell {
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-dim) !important;
+}
+
+.sdkCell { color: var(--text-dim) !important; }
+
+/* Method badge */
+.method {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .07em;
+}
+.method[data-m="GET"]    { background: var(--accent-dim); color: var(--accent); }
+.method[data-m="POST"]   { background: var(--blue-dim);   color: var(--blue); }
+.method[data-m="PUT"]    { background: var(--amber-dim);  color: var(--amber); }
+.method[data-m="PATCH"]  { background: var(--purple-dim); color: var(--purple); }
+.method[data-m="DELETE"] { background: var(--red-dim);    color: var(--red); }
+
+/* Duration */
+.dur[data-tier="ok"]   { color: var(--text-dim); }
+.dur[data-tier="mid"]  { color: var(--amber); }
+.dur[data-tier="slow"] { color: var(--red); }
+.durUnit { font-size: 9px; opacity: .6; }
+
+/* CPU */
+.cpu[data-tier="ok"]   { color: var(--accent); }
+.cpu[data-tier="mid"]  { color: var(--amber); }
+.cpu[data-tier="high"] { color: var(--red); }
+
+/* Exception columns */
+.excType { color: var(--red) !important; }
+.excMsg {
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-dim) !important;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.emptyIcon { font-size: 22px; opacity: .3; }

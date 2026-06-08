@@ -1,0 +1,64 @@
+/* ── Dark theme (default) ─────────────────────────────── */
+:root {
+  --bg:          #090b0e;
+  --surface:     #0f1215;
+  --surface-hi:  #141820;
+  --border:      #1a1f28;
+  --border-hi:   #252d3a;
+  --text:        #dce6f0;
+  --text-muted:  #3d4e63;
+  --text-dim:    #5c7085;
+
+  --accent:      #00c896;
+  --accent-dim:  rgba(0,200,150,.12);
+  --blue:        #3d8ef0;
+  --blue-dim:    rgba(61,142,240,.12);
+  --amber:       #e8a838;
+  --amber-dim:   rgba(232,168,56,.12);
+  --red:         #e05252;
+  --red-dim:     rgba(224,82,82,.12);
+  --purple:      #a855f7;
+  --purple-dim:  rgba(168,85,247,.12);
+  --pink:        #ec4899;
+  --pink-dim:    rgba(236,72,153,.12);
+
+  --input-bg:     #0d1117;
+  --input-border: #252d3a;
+
+  --font-mono:   'IBM Plex Mono', 'Fira Code', monospace;
+  --font-sans:   'IBM Plex Sans', system-ui, sans-serif;
+  --radius:      4px;
+  --radius-lg:   8px;
+
+  color-scheme: dark;
+}
+
+/* ── Light theme ──────────────────────────────────────── */
+[data-theme="light"] {
+  --bg:          #f0f2f6;
+  --surface:     #ffffff;
+  --surface-hi:  #f5f7fa;
+  --border:      #e2e8f0;
+  --border-hi:   #c8d3e0;
+  --text:        #0f172a;
+  --text-muted:  #94a3b8;
+  --text-dim:    #64748b;
+
+  --accent:      #00a87c;
+  --accent-dim:  rgba(0,168,124,.10);
+  --blue:        #2563eb;
+  --blue-dim:    rgba(37,99,235,.10);
+  --amber:       #b45309;
+  --amber-dim:   rgba(180,83,9,.10);
+  --red:         #dc2626;
+  --red-dim:     rgba(220,38,38,.10);
+  --purple:      #7c3aed;
+  --purple-dim:  rgba(124,58,237,.10);
+  --pink:        #db2777;
+  --pink-dim:    rgba(219,39,119,.10);
+
+  --input-bg:     #f8fafc;
+  --input-border: #d1dae6;
+
+  color-scheme: light;
+}

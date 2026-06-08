@@ -1,0 +1,71 @@
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  flex-wrap: wrap;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.inputs { display: flex; align-items: center; gap: 10px; flex: 1; flex-wrap: wrap; }
+
+.field  { display: flex; align-items: center; gap: 7px; }
+
+.fieldLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.input {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius);
+  padding: 5px 9px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text);
+  outline: none;
+  transition: border-color .15s;
+  color-scheme: inherit;
+}
+.input:focus { border-color: var(--accent); }
+.input::-webkit-calendar-picker-indicator { opacity: .5; cursor: pointer; }
+.input::-webkit-calendar-picker-indicator:hover { opacity: 1; }
+
+.arrow { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); flex-shrink: 0; }
+
+.clearBtn {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .06em;
+  padding: 4px 10px;
+  background: var(--red-dim);
+  border: 1px solid rgba(224,82,82,.25);
+  border-radius: var(--radius);
+  color: var(--red);
+  cursor: pointer;
+  transition: opacity .15s;
+  flex-shrink: 0;
+}
+.clearBtn:hover { opacity: .75; }
+
+.liveBadge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .08em;
+  color: var(--accent);
+  flex-shrink: 0;
+}

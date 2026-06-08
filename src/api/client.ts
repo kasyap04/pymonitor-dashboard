@@ -1,0 +1,7 @@
+export const BASE_URL = (import.meta.env.VITE_COLLECTOR_URL as string | undefined) ?? '/collector'
+
+export async function get<T>(path: string): Promise<T> {
+  const res = await fetch(`${BASE_URL}${path}`)
+  if (!res.ok) throw new Error(`${res.status} ${res.statusText}`)
+  return res.json() as Promise<T>
+}

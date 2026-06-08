@@ -1,0 +1,57 @@
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px 14px;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+}
+.card[data-accent="blue"]::after   { background: var(--blue); }
+.card[data-accent="amber"]::after  { background: var(--amber); }
+.card[data-accent="red"]::after    { background: var(--red); }
+.card[data-accent="purple"]::after { background: var(--purple); }
+.card[data-accent="pink"]::after   { background: var(--pink); }
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.value {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--text);
+  letter-spacing: -.01em;
+}
+
+.unit {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-left: 3px;
+}
+
+.sub {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  letter-spacing: .06em;
+}
